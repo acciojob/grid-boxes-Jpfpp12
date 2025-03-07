@@ -4,19 +4,80 @@
   <head>
     <link rel="stylesheet" href="styles.css" />
   </head>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#grid{
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(10,100px);
+    grid-template-rows: repeat(10,100px);
+    gap: 10px;
+    grid-template-areas: 
+    "a a a a "
+    "b c d d"
+    "b e e f"
+    "b g h i"
+    "b j j j"
+}
+.box{
+    background-color: green;
+}
+.one{
+    grid-area: a;
 
+}
+.two{
+    grid-area: b;
+
+}
+.three{
+    grid-area: c;
+
+}
+.four{
+    grid-area: d;
+
+}
+.five{
+    grid-area: e;
+
+}
+.six{
+    grid-area: f;
+
+}
+.seven{
+    grid-area: g;
+
+}
+.eight{
+    grid-area: h;
+
+}
+.nine{
+    grid-area: i;
+
+}
+.ten{
+    grid-area: j;
+
+}
+</style>
   <body>
     <body id="grid">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
+      <div class="box one">1</div>
+      <div class="box two">2</div>
+      <div class="box three">3</div>
+      <div class="box four">4</div>
+      <div class="box five">5</div>
+      <div class="box six">6</div>
+      <div class="box seven">7</div>
+      <div class="box eight">8</div>
+      <div class="box nine">9</div>
+      <div class="box ten">10</div>
     </body>
     <script type="text/javascript" src="./script.js"></script>
   </body>
