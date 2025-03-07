@@ -1,86 +1,97 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
+<head>
     <link rel="stylesheet" href="styles.css" />
-  </head>
+</head>
 <style>
-*{
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
-#grid{
+#grid {
     display: grid;
-    grid-template-columns: repeat(10,200px);
-    grid-template-rows: repeat(10,100px);
-    gap: 5px;
-    grid-template-areas: 
-    "a a a a "
-    "b c d d"
-    "b e e f"
-    "b g h i"
-    "b j j j"
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
 }
-.box{
-	padding:10px;
-	color:white;
-	font-size:36px;
+
+.box {
+    padding: 20px;
+    font-size: 24px;
+    color: white;
     background-color: green;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.one{
-    grid-area: a;
 
+/* Grid placement */
+.one {
+    grid-column: 1 / span 3;
 }
-.two{
-    grid-area: b;
 
+.two {
+    grid-row: 2 / span 4;
+    grid-column: 1;
 }
-.three{
-    grid-area: c;
 
+.three {
+    grid-column: 2;
+    grid-row: 2;
 }
-.four{
-    grid-area: d;
 
+.four {
+    grid-column: 3;
+    grid-row: 2;
 }
-.five{
-    grid-area: e;
 
+.five {
+    grid-column: 2 / span 2;
+    grid-row: 3;
 }
-.six{
-    grid-area: f;
 
+.six {
+    grid-column: 3;
+    grid-row: 3;
 }
-.seven{
-    grid-area: g;
 
+.seven {
+    grid-column: 2;
+    grid-row: 4;
 }
-.eight{
-    grid-area: h;
 
+.eight {
+    grid-column: 3;
+    grid-row: 4;
 }
-.nine{
-    grid-area: i;
 
+.nine {
+    grid-column: 4;
+    grid-row: 4;
 }
-.ten{
-    grid-area: j;
 
+.ten {
+    grid-column: 1 / span 3;
+    grid-row: 5;
 }
 </style>
-  <body>
-    <body id="grid">
-      <div class="box one">1</div>
-      <div class="box two">2</div>
-      <div class="box three">3</div>
-      <div class="box four">4</div>
-      <div class="box five">5</div>
-      <div class="box six">6</div>
-      <div class="box seven">7</div>
-      <div class="box eight">8</div>
-      <div class="box nine">9</div>
-      <div class="box ten">10</div>
-    </body>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+<body>
+    <div id="grid">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+        <div class="box four">4</div>
+        <div class="box five">5</div>
+        <div class="box six">6</div>
+        <div class="box seven">7</div>
+        <div class="box eight">8</div>
+        <div class="box nine">9</div>
+        <div class="box ten">10</div>
+    </div>
+</body>
 </html>
