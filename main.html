@@ -1,85 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #grid {
+            display: grid;
+            grid-template-columns: 242.5px 242.5px 242.5px 242.5px;
+            grid-template-rows: 124px 124px 124px 124px 124px;
+            gap: 10px;
+            width: max-content;
+            background-color: white;
+            padding: 10px;
+        }
+        
+        .box {
+            font-size: 24px;
+            color: white;
+            background-color: green;
+            border: 5px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Corrected Grid Placement */
+        .one {
+            grid-column: span 4;
+        }
+        
+        .two {
+            grid-row: span 4;
+        }
+        
+        .three {
+            grid-column: 2;
+        }
+
+        .four {
+            grid-column: 3 / span 1;
+        }
+
+        .five {
+            grid-column: 2 / span 2;
+            grid-row: 3;
+        }
+
+        .six {
+            grid-column: 4;
+            grid-row: 3;
+        }
+
+        .seven {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .eight {
+            grid-column: 3;
+            grid-row: 4;
+        }
+
+        .nine {
+            grid-column: 4;
+            grid-row: 4;
+        }
+
+        .ten {
+            grid-column: span 3;
+            grid-row: 5;
+        }
+    </style>
 </head>
-<style>
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-#grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 5px;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-}
-
-.box {
-    padding: 20px;
-    font-size: 24px;
-    color: white;
-    background-color: green;
-    border: 5px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Grid placement */
-.one {
-    grid-column: 1 / span 3;
-}
-
-.two {
-    grid-row: 2 / span 4;
-    grid-column: 1;
-}
-
-.three {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.four {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.five {
-    grid-column: 2 / span 2;
-    grid-row: 3;
-}
-
-.six {
-    grid-column: 3;
-    grid-row: 3;
-}
-
-.seven {
-    grid-column: 2;
-    grid-row: 4;
-}
-
-.eight {
-    grid-column: 3;
-    grid-row: 4;
-}
-
-.nine {
-    grid-column: 4;
-    grid-row: 4;
-}
-
-.ten {
-    grid-column: 1 / span 3;
-    grid-row: 5;
-}
-</style>
 <body>
     <div id="grid">
         <div class="box one">1</div>
